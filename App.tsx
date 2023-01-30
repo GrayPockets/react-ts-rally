@@ -1,10 +1,93 @@
 import * as React from 'react';
 import './style.css';
 import getBills from './bills.json';
+import getUsers from './users.json';
+import getBillEngagementTimeseries from './billEngagementTimeseries.json';
 
 const bills = getBills.bills;
+const users = getUsers;
+const billEngagementTimeseries = getBillEngagementTimeseries;
+
+const totalCitizens = users.length;
+const engagedCitizens = [
+  ...new Set(billEngagementTimeseries.map((time) => time.userId)),
+].length;
+const percentageEngagedCitizens = Number(
+  engagedCitizens / totalCitizens
+).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 0 });
+
+const billSupportFor = Object.assign(
+  {},
+  ...bills
+    .map((bill) => {
+      return billEngagementTimeseries.filter((time) => {
+        return (
+          time.billId === bill.type + '-' + bill.number &&
+          time.supportedByUser === true
+        );
+      });
+    })
+    .map((bsf) => {
+      return { [bsf[0].billId]: bsf.length };
+    })
+);
+
+const billSupportAgainst = Object.assign(
+  {},
+  ...bills
+    .map((bill) => {
+      return billEngagementTimeseries.filter((time) => {
+        return (
+          time.billId === bill.type + '-' + bill.number &&
+          time.supportedByUser === false
+        );
+      });
+    })
+    .map((bsf) => {
+      return { [bsf[0].billId]: bsf.length };
+    })
+);
+
+const billSupportForTime = Object.assign(
+  {},
+  ...bills
+    .map((bill) => {
+      return billEngagementTimeseries.filter((time) => {
+        return (
+          time.billId === bill.type + '-' + bill.number &&
+          time.supportedByUser === true
+        );
+      });
+    })
+    .map((bsf) => {
+      return {
+        [bsf[0].billId]: [
+          ...new Set(bsf.map((bsfss) => new Date(bsfss.createdAt))),
+        ]
+          .sort((a: Date, b: Date) => {
+            return a.getTime() - b.getTime();
+          })
+          .filter(
+            (date: Date, i, self) =>
+              self.findIndex((d: Date) => d.getTime() == date.getTime()) === i
+          )
+          .map((time: Date) => {
+            //console.log(JSON.stringify(bsf));
+
+            return {
+              [time.toDateString()]: bsf.filter((bsfsc) => {
+                return new Date(bsfsc.createdAt).getTime() <= time.getTime();
+              }).length,
+            };
+          }),
+      };
+    })
+);
 
 export default function App() {
+  const [admin, setAdmin] = React.useState(false);
+  const [timeSeries, setTimeSeries] = React.useState(false);
+  const [selectedBill, setSelectedBill] = React.useState('');
   const [supportedBills, setSupportedBills] = React.useState(
     localStorage.getItem('supportedBills')
       ? JSON.parse(localStorage.getItem('supportedBills'))
@@ -155,29 +238,159 @@ export default function App() {
     );
   };
 
+  const BillTracker = ({ theBills }) => {
+    return (
+      <div>
+        <h2>Bill Tracker</h2>
+        {bills.map((bill) => (
+          <div
+            style={{
+              display: 'block',
+              border: 'solid',
+              margin: '0 0 5mm 0',
+              overflow: 'hidden',
+              position: 'relative',
+              width: '100%',
+            }}
+            key={bill.type + '-' + bill.number}
+          >
+            <LeftSide theBill={bill} />
+            <RightSide
+              supported={supportedBills[bill.type + '-' + bill.number]}
+              billNumber={bill.type + '-' + bill.number}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const TimeSeries = () => {
+    return (
+      <div>
+        <h3 style={{ display: 'inline-block' }}>
+          Time Series of {selectedBill}
+        </h3>
+        <div
+          style={{
+            display: 'inline-block',
+            margin: '5mm',
+          }}
+        >
+          <button
+            style={{ color: 'blue' }}
+            onClick={() => setTimeSeries(false)}
+          >
+            Back to All Bills
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>% supporting</th>
+            </tr>
+          </thead>
+          <tbody style={{ textAlign: 'center' }}>
+            {billSupportForTime[selectedBill].map((bsft) => (
+              <tr key={Object.keys(bsft)[0]}>
+                <td>{Object.keys(bsft)[0]}</td>
+                <td>
+                  {Number(
+                    bsft[Object.keys(bsft)[0]] / totalCitizens
+                  ).toLocaleString(undefined, {
+                    style: 'percent',
+                    minimumFractionDigits: 0,
+                  })}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
+  const AllBills = () => {
+    return (
+      <div>
+        <p>Total citizens: {totalCitizens}</p>
+        <p>Engaged citizen: {engagedCitizens}</p>
+        <p>% Engaged citizen: {percentageEngagedCitizens}</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Time Breakdown</th>
+              <th>Bill</th>
+              <th>% supporting</th>
+              <th>% not supporting</th>
+            </tr>
+          </thead>
+          <tbody style={{ textAlign: 'center' }}>
+            {bills.map((bill) => (
+              <tr key={bill.type + '-' + bill.number}>
+                <td>
+                  <button
+                    style={{ color: 'blue' }}
+                    onClick={() => {
+                      setSelectedBill(bill.type + '-' + bill.number);
+                      setTimeSeries(true);
+                    }}
+                  >
+                    Select
+                  </button>
+                </td>
+                <th>{bill.type + '-' + bill.number}</th>
+                <td>
+                  {Number(
+                    billSupportFor[bill.type + '-' + bill.number] /
+                      totalCitizens
+                  ).toLocaleString(undefined, {
+                    style: 'percent',
+                    minimumFractionDigits: 0,
+                  })}
+                </td>
+                <td>
+                  {Number(
+                    billSupportAgainst[bill.type + '-' + bill.number] /
+                      totalCitizens
+                  ).toLocaleString(undefined, {
+                    style: 'percent',
+                    minimumFractionDigits: 0,
+                  })}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
+  const Admin = () => {
+    return (
+      <div>
+        <h2>Admin</h2>
+        {timeSeries ? <TimeSeries /> : <AllBills />}
+      </div>
+    );
+  };
+
   return (
     <div>
       <h1>Civix</h1>
-      <h2>Bill Tracker</h2>
-      {bills.map((bill) => (
-        <div
-          style={{
-            display: 'block',
-            border: 'solid',
-            margin: '0 0 5mm 0',
-            overflow: 'hidden',
-            position: 'relative',
-            width: '100%',
-          }}
-          key={bill.type + '-' + bill.number}
-        >
-          <LeftSide theBill={bill} />
-          <RightSide
-            supported={supportedBills[bill.type + '-' + bill.number]}
-            billNumber={bill.type + '-' + bill.number}
-          />
-        </div>
-      ))}
+      <div style={{ position: 'absolute', top: 0, right: 0, margin: '5mm' }}>
+        {admin ? (
+          <button style={{ color: 'blue' }} onClick={() => setAdmin(false)}>
+            Bill Tracker
+          </button>
+        ) : (
+          <button style={{ color: 'blue' }} onClick={() => setAdmin(true)}>
+            Admin
+          </button>
+        )}
+      </div>
+      {admin ? <Admin /> : <BillTracker theBills={bills} />}
     </div>
   );
 }
