@@ -1,0 +1,326 @@
+{
+  "bills": [
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "19:36:20",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "1456",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Peace Corps Reauthorization Act of 2022",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T14:58:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/1456?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "19:27:15",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "3157",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Bridging the Gap for New Americans Act",
+      "type": "S",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T14:58:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/s/3157?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "19:13:04",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "3895",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "United States Commission on International Religious Freedom Reauthorization Act of 2022",
+      "type": "S",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T14:58:39Z",
+      "url": "https://api.congress.gov/v3/bill/117/s/3895?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "18:45:35",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "2771",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to designate the community-based outpatient clinic of the Department of Veterans Affairs in San Angelo, Texas, as the \\\"Colonel Charles and JoAnne Powell Department of Veterans Affairs Clinic\\\".",
+      "type": "S",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:39Z",
+      "url": "https://api.congress.gov/v3/bill/117/s/2771?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "18:34:51",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "7698",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the outpatient clinic of the Department of Veterans Affairs in Ventura, California, as the \\\"Captain Rosemary Bryant Mariner Outpatient Clinic\\\".",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:39Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/7698?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "text": "Referred to the Committee on the Judiciary. (text: CR S4825-4826)"
+      },
+      "number": "774",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution designating September 2022 as National Democracy Month as a time to reflect on the contributions of the system of government of the United States to a more free and stable world.",
+      "type": "SRES",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T12:58:42Z",
+      "url": "https://api.congress.gov/v3/bill/117/sres/774?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "18:19:09",
+        "text": "At the conclusion of debate, the Yeas and Nays were demanded and ordered. Pursuant to the provisions of clause 8, rule XX, the Chair announced that further proceedings on the motion would be postponed."
+      },
+      "number": "4358",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Little Manatee Wild and Scenic River Act",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/4358?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "18:14:30",
+        "text": "The title of the measure was amended. Agreed to without objection."
+      },
+      "number": "820",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "New Philadelphia National Historic Site Act",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T14:58:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/820?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "18:04:30",
+        "text": "At the conclusion of debate, the Yeas and Nays were demanded and ordered. Pursuant to the provisions of clause 8, rule XX, the Chair announced that further proceedings on the motion would be postponed."
+      },
+      "number": "2490",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Blackwell School National Historic Site Act",
+      "type": "S",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:39Z",
+      "url": "https://api.congress.gov/v3/bill/117/s/2490?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "17:56:59",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "7618",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the Kol Israel Foundation Holocaust Memorial in Bedford Heights, Ohio, as a national memorial.",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/7618?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "17:46:15",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "6734",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Keep America’s Refuges Operational Act of 2022",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/6734?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "8326",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Ensuring a Fair and Accurate Census Act",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T04:13:58Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/8326?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "4885",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to amend the Violent Crime Control and Law Enforcement Act of 1994, to reauthorize the Missing Americans Alert Program.",
+      "type": "S",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T04:15:56Z",
+      "url": "https://api.congress.gov/v3/bill/117/s/4885?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "2988",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Whistleblower Protection Improvement Act of 2021",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T17:15:24Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/2988?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "302",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "PPSA Act of 2021",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T04:13:58Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/302?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "text": "Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "884",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "National Aviation Preparedness Plan Act of 2022",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T04:13:58Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/884?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "17:35:49",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "6353",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "National Service Animals Memorial Act",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/6353?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "17:31:04",
+        "text": "At the conclusion of debate, the Yeas and Nays were demanded and ordered. Pursuant to the provisions of clause 8, rule XX, the Chair announced that further proceedings on the motion would be postponed."
+      },
+      "number": "4009",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Enslaved Voyages Memorial Act",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/4009?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "17:21:29",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "3034",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend title 28, United States Code, to provide an additional place for holding court for the Western District of Washington, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/3034?format=json"
+    },
+    {
+      "congress": 117,
+      "latestAction": {
+        "actionDate": "2022-09-19",
+        "actionTime": "17:15:39",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "number": "4330",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "PRESS Act",
+      "type": "HR",
+      "updateDate": "2022-09-20",
+      "updateDateIncludingText": "2022-09-20T15:13:38Z",
+      "url": "https://api.congress.gov/v3/bill/117/hr/4330?format=json"
+    }
+  ],
+  "pagination": {
+    "count": 398448,
+    "next": "https://api.data.gov/congress/v3/bill?offset=20&limit=20&format=json"
+  },
+  "request": {
+    "contentType": "application/json",
+    "format": "json"
+  }
+}
